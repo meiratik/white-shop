@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Кофейня — концепт сайта</title>
+<style>
+:root{--bg:#FAF7F2;--card:#FFFFFF;--ink:#2B2118;--mute:#5E5045;--accent:#7A4A2B;--on-accent:#FFFFFF;--line:#E6DDD0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1C1612;--card:#261E18;--ink:#F5EEE6;--mute:#C9BBAA;--accent:#E0B48A;--on-accent:#1C1612;--line:#3A2F27;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1C1612;--card:#261E18;--ink:#F5EEE6;--mute:#C9BBAA;--accent:#E0B48A;--on-accent:#1C1612;--line:#3A2F27;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:20px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;line-height:1.2;margin:0}
+h1{font-size:clamp(2.2rem,8vw,3.6rem)}
+h2{font-size:2rem;margin-bottom:24px}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Georgia,serif;font-size:1.3rem;text-decoration:none}
+.logo svg{width:34px;height:34px;stroke:var(--accent)}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{padding:10px 12px;text-decoration:none;font-weight:600;border-radius:10px}
+nav a:hover,nav a:focus{background:var(--card);outline:2px solid var(--accent)}
+.hero{padding:72px 0 56px;text-align:center;border:0}
+.hero svg{width:96px;height:96px;stroke:var(--accent);margin-bottom:20px}
+.hero p{color:var(--mute);margin:16px 0 32px;font-size:1.2rem}
+.btns{display:flex;flex-direction:column;gap:14px;max-width:420px;margin:0 auto}
+.btn{display:block;padding:18px 24px;min-height:60px;border-radius:14px;text-align:center;text-decoration:none;font-weight:700;font-size:1.15rem;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--on-accent)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.group{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px 20px;margin-bottom:20px}
+.group h3{font-size:1.1rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin:16px 0 4px}
+.item{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border:0}
+.item b{font-weight:700;white-space:nowrap}
+.item small{display:block;color:var(--mute);font-size:.85rem;line-height:1.3}
+.note{color:var(--mute);font-size:.9rem}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px}
+dt{color:var(--mute)}dd{margin:0;font-weight:600}
+footer{padding:32px 0 96px;text-align:center;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line)}
+.bar .btn{flex:1;padding:14px 8px;min-height:56px}
+@media(min-width:700px){.btns{flex-direction:row;max-width:none;justify-content:center}.btn{min-width:230px}.bar{display:none}footer{padding-bottom:32px}}
+@media(max-width:560px){nav{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="logo" href="#top" aria-label="На главную">
+  <svg viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18h24v10a10 10 0 0 1-10 10h-4a10 10 0 0 1-10-10V18z"/><path d="M34 21h3a4 4 0 0 1 0 8h-3"/><path d="M18 8c-2 2 2 4 0 6M26 8c-2 2 2 4 0 6"/></svg>
+  Название
+ </a>
+ <nav aria-label="Разделы"><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#visit">Как найти</a></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+ <svg viewBox="0 0 48 48" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18h24v10a10 10 0 0 1-10 10h-4a10 10 0 0 1-10-10V18z"/><path d="M34 21h3a4 4 0 0 1 0 8h-3"/><path d="M18 8c-2 2 2 4 0 6M26 8c-2 2 2 4 0 6"/></svg>
+ <h1>Кофе без суеты</h1>
+ <p>Кофейня в ТРЦ Grand Park. Заходите отдохнуть от покупок — мы открыты каждый день.</p>
+ <div class="btns"><a class="btn main" href="#menu">Смотреть меню</a><a class="btn" href="tel:+70000000000">Позвонить</a></div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+ <h2>Меню</h2>
+ <div class="group"><h3>Кофе</h3>
+  <div class="item"><span>Эспрессо</span><b>700 ₸</b></div>
+  <div class="item"><span>Американо</span><b>900 ₸</b></div>
+  <div class="item"><span>Капучино<small>Кофе с молочной пенкой</small></span><b>1 200 ₸</b></div>
+  <div class="item"><span>Латте<small>Кофе с большим количеством молока</small></span><b>1 300 ₸</b></div>
+  <div class="item"><span>Флэт уайт<small>Крепкий кофе с мягким молоком</small></span><b>1 400 ₸</b></div>
+  <div class="item"><span>Раф<small>Сливочный кофе с ванилью</small></span><b>1 600 ₸</b></div>
+  <div class="item"><span>Моккачино<small>Кофе с шоколадом</small></span><b>1 500 ₸</b></div>
+  <div class="item"><span>Кофе без кофеина</span><b>1 000 ₸</b></div>
+ </div>
+ <div class="group"><h3>Чай и другое</h3>
+  <div class="item"><span>Чёрный или зелёный чай</span><b>800 ₸</b></div>
+  <div class="item"><span>Какао</span><b>1 200 ₸</b></div>
+  <div class="item"><span>Свежевыжатый сок</span><b>1 500 ₸</b></div>
+  <div class="item"><span>Горячий шоколад</span><b>1 300 ₸</b></div>
+  <div class="item"><span>Травяной чай</span><b>900 ₸</b></div>
+  <div class="item"><span>Молочный коктейль</span><b>1 600 ₸</b></div>
+  <div class="item"><span>Смузи</span><b>1 700 ₸</b></div>
+  <div class="item"><span>Лимонад</span><b>1 400 ₸</b></div>
+  <div class="item"><span>Вода</span><b>400 ₸</b></div>
+ </div>
+ <div class="group"><h3>Сладкое</h3>
+  <div class="item"><span>Круассан</span><b>1 000 ₸</b></div>
+  <div class="item"><span>Чизкейк</span><b>1 800 ₸</b></div>
+  <div class="item"><span>Печенье</span><b>500 ₸</b></div>
+  <div class="item"><span>Маффин</span><b>800 ₸</b></div>
+  <div class="item"><span>Пирожное</span><b>1 500 ₸</b></div>
+  <div class="item"><span>Мороженое</span><b>900 ₸</b></div>
+ </div>
+ <div class="group"><h3>Перекус</h3>
+  <div class="item"><span>Сэндвич с курицей</span><b>1 800 ₸</b></div>
+  <div class="item"><span>Сэндвич с сыром и ветчиной</span><b>1 700 ₸</b></div>
+  <div class="item"><span>Сырники</span><b>1 600 ₸</b></div>
+  <div class="item"><span>Овсяная каша</span><b>1 300 ₸</b></div>
+ </div>
+ <p class="note">Позиции и цены — пример. Заменим на реальное меню.</p>
+</div></section>
+
+<section id="about"><div class="wrap">
+ <h2>О нас</h2>
+ <p>Мы варим кофе из свежеобжаренных зёрен и печём сладости каждое утро. Здесь можно спокойно посидеть, почитать или встретиться с друзьями.</p>
+</div></section>
+
+<section id="visit"><div class="wrap">
+ <h2>Как нас найти</h2>
+ <dl><dt>Адрес</dt><dd>ТРЦ Grand Park, ул. Кабдолова, 1/4, Алматы</dd><dt>Часы</dt><dd>Ежедневно, 10:00–22:00 (как у ТРЦ)</dd><dt>Телефон</dt><dd><a href="tel:+70000000000">+7 000 000 00 00</a></dd></dl>
+ <div class="btns" style="margin-top:28px"><a class="btn main" href="https://go.2gis.com/dJwOI">Открыть карту 2ГИС</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© Название кофейни</div></footer>
+
+<div class="bar"><a class="btn main" href="tel:+70000000000">Позвонить</a><a class="btn" href="#visit">Как найти</a></div>
+</body>
+</html>
